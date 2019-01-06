@@ -1,0 +1,4 @@
+en:
+  errors:
+    default: Something went wrong
+    login_unique?: This login is already registered. Please, try another one.

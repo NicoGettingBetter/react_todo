@@ -3,14 +3,21 @@ import {
   BrowserRouter as Router,
   Route,
 } from 'react-router-dom'
-import LandingPage from './components/landingPage';
-import NewPage from './components/newPage';
+import { Provider } from 'react-redux'
+
+import Projects from 'components/projects/Projects'
+import Login from 'components/users/Login'
+import Registration from 'components/users/Registration'
+
 const App = (props) => (
-  <Router>
-    <div>
-      <Route exact path='/' component={LandingPage} />
-      <Route path='/new' component={NewPage} />
-    </div>
-  </Router>
+  <Provider store={props.store}>
+    <Router>
+      <div>
+        <Route exact path='/' component={Projects} />
+        <Route path='/sign-in' component={Login} />
+        <Route path='/sign-up' component={Registration} />
+      </div>
+    </Router>
+  </Provider>
 )
 export default App;

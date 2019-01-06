@@ -1,8 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Routes from './routes';
+import React from 'react'
+import ReactDOM from 'react-dom'
+
+import Routes from 'routes'
+import store from 'store'
+
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <Routes />, document.getElementById('react-todo-app'),
+    <Routes store={store} />, document.getElementById('react-todo-app'),
   )
 });
